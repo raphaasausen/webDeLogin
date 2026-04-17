@@ -40,8 +40,16 @@
         function login() {
             const usuario = document.getElementById("usuario").value;
             const senha = document.getElementById("senha").value;
-            console.log("Usuario informado foi: " + usuario);
-            console.log("Senha informada foi: " + senha);
+            if (usuario == "" && senha == "") {
+                console.log("Usuário e senha não informados!");
+            } else if (usuario == "") {
+                console.log("Usuário não informado!");
+            } else if (senha == "") {
+                console.log("Senha não informada!");
+            } else {
+                console.log("O usuário informado foi: " + usuario);
+                console.log("A senha informada foi: " + senha);
+            }
         }
 
     </script>
