@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #login {
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+        <h1>Seja bem vindo a aba de login!</h1>
+        <h2>Faça seu login aqui!</h2>
+    </div>
+    <div class="container">
+        <label for="usuario">Usuário:</label>
+        <input id="usuario" type="text" placeholder="Digite aqui...">
+        <br>
+        <br>
+        <label for="senha">Senha:</label>
+        <input id="senha" type="password" placeholder="Digite aqui...">
+        <br>
+        <br>
+        <button onclick="login()" id="login">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+            if (usuario == "" && senha == "") {
+                console.log("Usuário e senha não informados!");
+            } else if (usuario == "") {
+                console.log("Usuário não informado!");
+            } else if (senha == "") {
+                console.log("Senha não informada!");
+            } else {
+                console.log("O usuário informado foi: " + usuario);
+                console.log("A senha informada foi: " + senha);
+                //eniar para outra web
+                window.location.href = "Login feito.html";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
